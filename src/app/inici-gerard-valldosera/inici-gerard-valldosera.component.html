@@ -1,0 +1,28 @@
+<h1>1</h1>
+
+<div>
+  <label>Nom berry</label>
+  <input type="text" id="berryNameOrId" [(ngModel)]="NomIdBerry">
+</div>
+
+<button (click)="BuscarBerry()" >
+  Buscar
+</button>
+
+
+<div *ngIf=" Dolca">
+<p>La berry es dolça.</p>
+<img *ngIf="Fotoberry" [src]="Fotoberry" >
+</div>
+
+<div *ngIf=" !Dolca">
+<p>La berry no es dolça</p>
+<img *ngIf="Fotoberry" [src]="Fotoberry" >
+</div>
+
+<h1>2</h1>
+<form (ngSubmit)="onSubmit()">
+  <label>Pokemon:</label>
+  <input type="text" id="Ruta" [(ngModel)]="Ruta" name="Ruta">
+  <button type="submit">Buscar</button>
+</form>
